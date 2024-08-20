@@ -1,6 +1,6 @@
 ## IDEA:
 A simple Calculator app with buttons. 
 # Tools used:
-.Java
+. Java
 
-.Swing
+. Swing 
