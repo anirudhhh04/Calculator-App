@@ -1,5 +1,5 @@
 ## IDEA:
-A simple Calculator app with buttons. 
+A simple Calculator app with GUI. 
 # Tools used:
 . Java
 
