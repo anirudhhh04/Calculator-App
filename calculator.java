@@ -4,7 +4,7 @@ import java.awt.event.*;
 class calculator implements ActionListener {
     JFrame f=new JFrame();
     JTextField t1;
-    JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b0,a,b,c,d,e1;
+    JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b0,a,b,c,d,e1,c1;
     calculator(){
     b1=new JButton("1");
     b2=new JButton("2");
@@ -21,6 +21,7 @@ class calculator implements ActionListener {
     c=new JButton("x");
     d=new JButton("/");
     e1=new JButton("=");
+    c1=new JButton("Clear");
     t1= new JTextField();
     b1.addActionListener(this);
     b2.addActionListener(this);
@@ -37,6 +38,7 @@ class calculator implements ActionListener {
     c.addActionListener(this);
     d.addActionListener(this);
     e1.addActionListener(this);
+    c1.addActionListener(this);
     f.setTitle("CALCULATOR");
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     f.setLayout(new GridLayout(4,4));
@@ -56,14 +58,17 @@ class calculator implements ActionListener {
     f.add(d);
     f.add(e1);
     f.add(t1);
+    f.add(c1);
     f.setVisible(true);
     f.setSize(400, 500);}
     public void actionPerformed(ActionEvent e){
-        if(e.getSource()!=e1){
+        if(e.getSource()!=e1 && e.getSource()!=c1{
           String s=((JButton)e.getSource()).getText();
           String t=t1.getText();
           t1.setText(t+s);
         }
+        else if(e.getSource()==c1){
+            t1.setText("0");}
         else{
             String s1=t1.getText();
             String t="",p="";
